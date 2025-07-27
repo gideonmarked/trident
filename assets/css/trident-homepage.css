@@ -1,0 +1,760 @@
+/* Trident Homepage Styles */
+
+.trident-homepage {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header Styles */
+.trident-header {
+    background: transparent;
+    color: white;
+    padding: 1.25rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.trident-header.scrolled {
+    background: rgba(25, 25, 25, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+.trident-header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.trident-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: white;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    padding: 0.5rem 0;
+    flex-shrink: 0;
+}
+
+.trident-logo-image {
+    height: 36px;
+    width: auto;
+}
+
+.trident-logo-text {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Hide logo text when image is loaded */
+.trident-logo-text.hidden {
+    display: none;
+}
+
+.trident-nav {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+    padding: 0.5rem 0;
+    flex: 1;
+    justify-content: center;
+}
+
+.trident-nav a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    padding: 0.5rem 0;
+}
+
+.trident-nav a:hover {
+    color: #fbbf24;
+}
+
+.trident-checkout-btn {
+    background: #fbbf24;
+    color: white;
+    padding: 0.875rem 1.75rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+.trident-checkout-btn:hover {
+    background: #f59e0b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Hero Section */
+.trident-hero {
+    position: relative;
+    min-height: 100vh;
+    background: #191919;
+    padding: 120px 2rem 2rem;
+    overflow: hidden;
+}
+
+.trident-hero-slider {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.trident-slide {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 600px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.trident-slide.active {
+    display: block;
+    opacity: 1;
+}
+
+.trident-slide-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+/* Hero Carousel */
+.trident-hero-carousel {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    z-index: 4;
+}
+
+.trident-carousel-prev,
+.trident-carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.trident-carousel-prev {
+    left: 2rem;
+}
+
+.trident-carousel-next {
+    right: 2rem;
+}
+
+.trident-carousel-prev:hover,
+.trident-carousel-next:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.trident-carousel-dots {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.trident-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.trident-dot.active {
+    background: #fbbf24;
+}
+
+/* About Section */
+.trident-about {
+    padding: 5rem 0;
+    background: #f8fafc;
+}
+
+.trident-about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: left;
+}
+
+.trident-about-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #1f2937;
+    margin-bottom: 2rem;
+}
+
+.trident-about-text {
+    max-width: 800px;
+    margin: 0;
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: #4b5563;
+}
+
+.trident-about-text p {
+    margin-bottom: 1.5rem;
+}
+
+/* Customize Section */
+.trident-customize {
+    position: relative;
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    overflow: hidden;
+}
+
+.trident-customize-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.1;
+}
+
+.trident-tumbler-patterns {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.trident-overlay-tumblers {
+    max-width: 100%;
+    height: auto;
+    opacity: 0.3;
+}
+
+.trident-pattern {
+    width: 80px;
+    height: 120px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 40px 40px 15px 15px;
+    position: relative;
+}
+
+.trident-pattern::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 20px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 30px 30px 0 0;
+}
+
+.trident-customize-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.trident-customize-title {
+    font-size: 1.5rem;
+    color: #92400e;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.trident-customize-subtitle {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #1f2937;
+    margin-bottom: 2rem;
+}
+
+.trident-customize-btn {
+    background: #1f2937;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.trident-customize-btn:hover {
+    background: #374151;
+    transform: translateY(-2px);
+}
+
+/* Featured Products */
+.trident-featured {
+    padding: 5rem 0;
+    background: #f8fafc;
+}
+
+.trident-featured-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.trident-featured-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #1f2937;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.trident-products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.trident-product-card {
+    background: white;
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.trident-product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.trident-product-pagination {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(0, 0, 0, 0.1);
+    color: #6b7280;
+    padding: 0.25rem 0.5rem;
+    border-radius: 10px;
+    font-size: 0.75rem;
+}
+
+.trident-product-image {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.trident-product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+
+.trident-product-name {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.trident-product-price {
+    font-size: 1.25rem;
+    font-weight: 900;
+    color: #059669;
+    margin-bottom: 1rem;
+}
+
+.trident-product-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.trident-customize-btn-small {
+    background: #fbbf24;
+    color: #1f2937;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.trident-customize-btn-small:hover {
+    background: #f59e0b;
+}
+
+.trident-color-swatches {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.trident-color-swatch {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.trident-color-swatch:hover {
+    transform: scale(1.2);
+    border-color: #1f2937;
+}
+
+.trident-color-swatch.green { background: #10b981; }
+.trident-color-swatch.brown { background: #92400e; }
+.trident-color-swatch.yellow { background: #fbbf24; }
+
+.trident-product-quantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.trident-quantity-select {
+    padding: 0.25rem 0.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 5px;
+    background: white;
+    font-size: 0.875rem;
+}
+
+.trident-checkout-btn {
+    width: 100%;
+    background: #1f2937;
+    color: white;
+    border: none;
+    padding: 0.75rem 1rem;
+    border-radius: 15px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.trident-checkout-btn:hover {
+    background: #374151;
+}
+
+.trident-shop-all {
+    text-align: center;
+}
+
+.trident-shop-all-btn {
+    background: #fbbf24;
+    color: #1f2937;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.125rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.trident-shop-all-btn:hover {
+    background: #f59e0b;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+.trident-footer {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    padding: 3rem 0 1rem;
+}
+
+.trident-footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.trident-footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.trident-footer-logo {
+    margin-bottom: 1rem;
+}
+
+.trident-footer-logo-image {
+    height: 48px;
+    width: auto;
+}
+
+.trident-footer-brand p {
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: #1f2937;
+}
+
+.trident-footer-email {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.trident-footer-email input {
+    flex: 1;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+}
+
+.trident-footer-email button {
+    background: #1f2937;
+    color: white;
+    border: none;
+    padding: 0.75rem 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.trident-footer-contact {
+    color: #1f2937;
+    font-size: 0.875rem;
+}
+
+.trident-footer-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.trident-footer-links h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #1f2937;
+}
+
+.trident-footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.trident-footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.trident-footer-links a {
+    color: #1f2937;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.3s ease;
+}
+
+.trident-footer-links a:hover {
+    color: #6b7280;
+}
+
+.trident-footer-copyright {
+    background: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.875rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .trident-header {
+        padding: 1rem 0;
+    }
+    
+    .trident-header-content {
+        padding: 0 1.5rem;
+    }
+    
+    .trident-nav {
+        gap: 1.5rem;
+        flex: 1;
+        justify-content: center;
+    }
+    
+    .trident-hero {
+        padding: 100px 1rem 1rem;
+    }
+    
+    .trident-hero-slider {
+        border-radius: 15px;
+    }
+    
+    .trident-slide {
+        height: 400px;
+    }
+    
+    .trident-carousel-prev,
+    .trident-carousel-next {
+        width: 45px;
+        height: 45px;
+        font-size: 1.375rem;
+    }
+    
+    .trident-carousel-prev {
+        left: 1.5rem;
+    }
+    
+    .trident-carousel-next {
+        right: 1.5rem;
+    }
+    
+    .trident-products-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .trident-customize-subtitle {
+        font-size: 2rem;
+    }
+    
+    .trident-footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .trident-header {
+        padding: 0.875rem 0;
+    }
+    
+    .trident-header-content {
+        padding: 0 1rem;
+    }
+    
+    .trident-nav {
+        gap: 1rem;
+        flex: 1;
+        justify-content: center;
+    }
+    
+    .trident-logo {
+        font-size: 1.25rem;
+    }
+    
+    .trident-logo-image {
+        height: 28px;
+    }
+    
+    .trident-checkout-btn {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.8rem;
+    }
+
+    .trident-hero {
+        padding: 80px 0.5rem 0.5rem;
+    }
+    
+    .trident-hero-slider {
+        border-radius: 10px;
+    }
+    
+    .trident-slide {
+        height: 300px;
+    }
+    
+    .trident-carousel-prev,
+    .trident-carousel-next {
+        width: 40px;
+        height: 40px;
+        font-size: 1.25rem;
+    }
+    
+    .trident-carousel-prev {
+        left: 1rem;
+    }
+    
+    .trident-carousel-next {
+        right: 1rem;
+    }
+
+    .trident-about-content,
+    .trident-customize-content,
+    .trident-featured-content {
+        padding: 0 1rem;
+    }
+    
+    .trident-about-title,
+    .trident-featured-title {
+        font-size: 2rem;
+    }
+} 

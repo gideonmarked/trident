@@ -1,0 +1,762 @@
+/* TRIDENT All Products Page Styles */
+:root {
+    --trident-green: #2d5016;
+    --trident-yellow: #fbbf24;
+    --trident-purple: #8b5cf6;
+    --trident-dark: #374151;
+    --trident-light: #f9fafb;
+    --trident-orange: #f59e0b;
+}
+
+.trident-products-page {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: var(--trident-dark);
+    margin-top: 80px;
+}
+
+/* Header */
+.trident-header {
+    background: #1a1a1a;
+    color: white;
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.trident-header.scrolled {
+    background: rgba(26, 26, 26, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+.trident-header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.trident-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.trident-logo-image {
+    height: 32px;
+    width: auto;
+    margin-right: 0.5rem;
+}
+
+.trident-logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+}
+
+/* Hide logo text when image is loaded */
+.trident-logo-text.hidden {
+    display: none;
+}
+
+.trident-nav {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.trident-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.trident-nav a:hover {
+    color: #fbbf24;
+}
+
+.trident-checkout-btn {
+    background: #fbbf24;
+    color: #1a1a1a;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.trident-checkout-btn:hover {
+    background: #f59e0b;
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.trident-hero {
+    position: relative;
+    min-height: 100vh;
+    background: #374151;
+    padding: 120px 2rem 2rem;
+    overflow: hidden;
+}
+
+.trident-hero-slider {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.trident-slide {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 600px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.trident-slide.active {
+    display: block;
+    opacity: 1;
+}
+
+.trident-slide-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.trident-hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.trident-hero-text {
+    color: white;
+}
+
+.trident-hero-subtitle {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+.trident-hero-title {
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+}
+
+.trident-hero-price {
+    background: var(--trident-purple);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.trident-hero-eco {
+    font-size: 1rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+    max-width: 500px;
+}
+
+.trident-hero-logos {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.trident-logo-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+    font-size: 0.875rem;
+}
+
+.trident-logo-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.trident-hero-product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.trident-tumbler-hero {
+    width: 300px;
+    height: 400px;
+    background: linear-gradient(135deg, #60a5fa, #3b82f6);
+    border-radius: 50px 50px 20px 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.trident-tumbler-lid {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 40px;
+    background: var(--trident-dark);
+    border-radius: 20px;
+}
+
+.trident-tumbler-handle {
+    position: absolute;
+    right: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 20px;
+    background: var(--trident-dark);
+    border-radius: 10px;
+}
+
+/* Product Summary Section */
+.trident-product-summary {
+    padding: 5rem 2rem;
+    background: var(--trident-light);
+}
+
+.trident-product-summary-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.trident-product-summary-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 3rem;
+    color: var(--trident-dark);
+}
+
+.trident-product-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.trident-product-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.trident-gallery-thumbnail {
+    width: 100px;
+    height: 120px;
+    border-radius: 25px 25px 8px 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 3px solid transparent;
+    overflow: hidden;
+}
+
+.trident-gallery-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px 25px 8px 8px;
+}
+
+.trident-gallery-thumbnail.active {
+    border-color: var(--trident-yellow);
+    transform: scale(1.05);
+}
+
+.trident-gallery-thumbnail:hover {
+    transform: scale(1.05);
+}
+
+.trident-main-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+}
+
+.trident-main-tumbler {
+    width: 200px;
+    height: 250px;
+    border-radius: 40px 40px 15px 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+.trident-main-tumbler img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 40px 40px 15px 15px;
+}
+
+
+
+.trident-product-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.trident-product-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--trident-dark);
+}
+
+.trident-product-description {
+    font-size: 1rem;
+    color: #6b7280;
+}
+
+.trident-color-options {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.trident-color-swatch {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #e5e7eb;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.trident-color-swatch.active {
+    border-color: var(--trident-yellow);
+}
+
+.trident-color-swatch.yellow { background: var(--trident-yellow); }
+.trident-color-swatch.black { background: var(--trident-dark); }
+.trident-color-swatch.green { background: #10b981; }
+.trident-color-swatch.teal { background: #14b8a6; }
+.trident-color-swatch.orange { background: var(--trident-orange); }
+
+.trident-quantity-selector {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.trident-quantity-select {
+    padding: 0.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+    background: white;
+    min-width: 80px;
+}
+
+.trident-product-text {
+    font-size: 0.875rem;
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+.trident-product-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.trident-customize-btn {
+    background: var(--trident-yellow);
+    color: var(--trident-dark);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.trident-customize-btn:hover {
+    background: #f59e0b;
+    transform: translateY(-2px);
+}
+
+.trident-checkout-btn {
+    background: transparent;
+    color: var(--trident-dark);
+    border: 2px solid var(--trident-yellow);
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.trident-checkout-btn:hover {
+    background: var(--trident-yellow);
+    transform: translateY(-2px);
+}
+
+/* Featured Products */
+.trident-featured {
+    padding: 5rem 2rem;
+    background: white;
+}
+
+.trident-featured-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.trident-featured-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 3rem;
+    color: var(--trident-dark);
+}
+
+.trident-products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.trident-product-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.trident-product-card:hover {
+    transform: translateY(-5px);
+}
+
+.trident-product-pagination {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+}
+
+.trident-product-image {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg, #10b981, #059669);
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+.trident-product-name {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--trident-dark);
+}
+
+.trident-color-swatches {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.trident-color-swatch {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #e5e7eb;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.trident-color-swatch:hover {
+    border-color: var(--trident-yellow);
+}
+
+.trident-product-price {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--trident-purple);
+    margin-bottom: 1rem;
+}
+
+.trident-product-quantity {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.trident-quantity-select {
+    padding: 0.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+    background: white;
+}
+
+.trident-product-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.trident-product-btn {
+    flex: 1;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.trident-product-btn.checkout {
+    background: var(--trident-dark);
+    color: white;
+}
+
+.trident-product-btn:hover {
+    transform: translateY(-1px);
+}
+
+/* Footer */
+.trident-footer {
+    background: linear-gradient(135deg, #fef3c7, #fbbf24);
+    padding: 3rem 2rem 1rem;
+}
+
+.trident-footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.trident-footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.trident-footer-logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--trident-dark);
+}
+
+.trident-footer-newsletter h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--trident-dark);
+}
+
+.trident-footer-email {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.trident-footer-email input {
+    flex: 1;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+}
+
+.trident-footer-email button {
+    background: var(--trident-dark);
+    color: white;
+    border: none;
+    padding: 0.75rem 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.trident-footer-contact {
+    color: var(--trident-dark);
+    font-size: 0.875rem;
+}
+
+.trident-footer-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.trident-footer-links h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--trident-dark);
+}
+
+.trident-footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.trident-footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.trident-footer-links a {
+    color: var(--trident-dark);
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.3s ease;
+}
+
+.trident-footer-links a:hover {
+    color: #6b7280;
+}
+
+.trident-footer-copyright {
+    background: var(--trident-dark);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.875rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .trident-hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .trident-product-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .trident-products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .trident-footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .trident-header {
+        padding: 1rem;
+    }
+
+    .trident-nav {
+        display: none;
+    }
+
+    .trident-hero {
+        padding: 100px 1rem 1rem;
+    }
+    
+    .trident-hero-slider {
+        border-radius: 15px;
+    }
+    
+    .trident-slide {
+        height: 400px;
+    }
+
+    .trident-hero-title {
+        font-size: 2.5rem;
+    }
+
+    .trident-hero-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+        padding: 0 1rem;
+    }
+
+    .trident-products-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .trident-hero-title {
+        font-size: 2rem;
+    }
+    
+    .trident-hero-logos {
+        flex-direction: column;
+        gap: 1rem;
+    }
+} 

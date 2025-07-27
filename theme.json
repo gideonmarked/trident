@@ -1,0 +1,141 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/theme.json",
+    "version": 2,
+    "settings": {
+        "color": {
+            "palette": [
+                {
+                    "slug": "primary",
+                    "color": "#667eea",
+                    "name": "Primary"
+                },
+                {
+                    "slug": "secondary",
+                    "color": "#764ba2",
+                    "name": "Secondary"
+                },
+                {
+                    "slug": "accent",
+                    "color": "#f093fb",
+                    "name": "Accent"
+                },
+                {
+                    "slug": "success",
+                    "color": "#48bb78",
+                    "name": "Success"
+                },
+                {
+                    "slug": "warning",
+                    "color": "#ed8936",
+                    "name": "Warning"
+                },
+                {
+                    "slug": "error",
+                    "color": "#f56565",
+                    "name": "Error"
+                },
+                {
+                    "slug": "dark",
+                    "color": "#2d3748",
+                    "name": "Dark"
+                },
+                {
+                    "slug": "light",
+                    "color": "#f7fafc",
+                    "name": "Light"
+                }
+            ]
+        },
+        "typography": {
+            "fontFamilies": [
+                {
+                    "fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif",
+                    "slug": "system",
+                    "name": "System"
+                },
+                {
+                    "fontFamily": "Georgia, serif",
+                    "slug": "serif",
+                    "name": "Serif"
+                },
+                {
+                    "fontFamily": "monospace",
+                    "slug": "monospace",
+                    "name": "Monospace"
+                }
+            ],
+            "fontSizes": [
+                {
+                    "slug": "small",
+                    "size": "14px",
+                    "name": "Small"
+                },
+                {
+                    "slug": "medium",
+                    "size": "16px",
+                    "name": "Medium"
+                },
+                {
+                    "slug": "large",
+                    "size": "18px",
+                    "name": "Large"
+                },
+                {
+                    "slug": "x-large",
+                    "size": "24px",
+                    "name": "Extra Large"
+                }
+            ]
+        },
+        "spacing": {
+            "units": ["px", "em", "rem", "%", "vw", "vh"],
+            "spacingSizes": [
+                {
+                    "slug": "small",
+                    "size": "20px",
+                    "name": "Small"
+                },
+                {
+                    "slug": "medium",
+                    "size": "40px",
+                    "name": "Medium"
+                },
+                {
+                    "slug": "large",
+                    "size": "60px",
+                    "name": "Large"
+                }
+            ]
+        },
+        "layout": {
+            "contentSize": "1200px",
+            "wideSize": "1400px"
+        }
+    },
+    "styles": {
+        "color": {
+            "background": "var(--wp--preset--color--light)",
+            "text": "var(--wp--preset--color--dark)"
+        },
+        "typography": {
+            "fontFamily": "var(--wp--preset--font-family--system)",
+            "fontSize": "var(--wp--preset--font-size--medium)",
+            "lineHeight": "1.6"
+        },
+        "spacing": {
+            "blockGap": "var(--wp--preset--spacing--medium)"
+        }
+    },
+    "templateParts": [
+        {
+            "name": "header",
+            "title": "Header",
+            "area": "header"
+        },
+        {
+            "name": "footer",
+            "title": "Footer",
+            "area": "footer"
+        }
+    ]
+} 
