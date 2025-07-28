@@ -857,7 +857,7 @@ $current_page = isset($_GET['page']) ? sanitize_text_field($_GET['page']) : 'pro
         /* Banner Grid */
         .banner-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            grid-template-columns: 1fr;
             gap: 2rem;
             max-width: 1200px;
             margin: 0 auto;

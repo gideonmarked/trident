@@ -97,6 +97,20 @@ if ($_POST && isset($_POST['add_product'])) {
             background: #f8fafc;
             color: #1f2937;
             line-height: 1.6;
+            position: relative;
+        }
+        
+        /* Dark overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1;
+            pointer-events: none;
         }
         
         .admin-container {
@@ -115,6 +129,7 @@ if ($_POST && isset($_POST['add_product'])) {
             overflow-y: auto;
             display: flex;
             flex-direction: column;
+            z-index: 10;
         }
         
         .sidebar-header {
@@ -223,6 +238,8 @@ if ($_POST && isset($_POST['add_product'])) {
             flex: 1;
             margin-left: 280px;
             padding: 2rem;
+            position: relative;
+            z-index: 10;
         }
         
         .page-header {

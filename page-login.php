@@ -55,7 +55,7 @@ if ($_POST && isset($_POST['trident_login'])) {
         
         body {
             font-family: 'Montserrat', sans-serif;
-            background: url('<?php echo get_template_directory_uri(); ?>/assets/images/login-bg.png') no-repeat center center fixed;
+            background: url('<?php echo get_template_directory_uri(); ?>/assets/images/login bg.png') no-repeat center center fixed;
             background-size: cover;
             min-height: 100vh;
             display: flex;
@@ -66,20 +66,7 @@ if ($_POST && isset($_POST['trident_login'])) {
             overflow: hidden;
         }
         
-        /* Bokeh effect overlay */
-        body::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 20% 30%, rgba(255, 215, 0, 0.3) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 70%, rgba(255, 165, 0, 0.2) 0%, transparent 50%),
-                        radial-gradient(circle at 40% 80%, rgba(255, 215, 0, 0.2) 0%, transparent 50%),
-                        radial-gradient(circle at 90% 20%, rgba(255, 165, 0, 0.3) 0%, transparent 50%);
-            pointer-events: none;
-        }
+
         
         /* Starburst effects */
         .starburst {
@@ -119,46 +106,23 @@ if ($_POST && isset($_POST['trident_login'])) {
             margin-bottom: 2rem;
             display: flex;
             align-items: center;
-            gap: 0.75rem;
+            justify-content: center;
         }
         
         .trident-logo-icon {
-            width: 32px;
-            height: 32px;
-            background: white;
-            border-radius: 50%;
+            width: 100%;
+            max-width: 300px;
+            height: auto;
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
         }
         
-        .trident-logo-icon::before {
-            content: '';
-            position: absolute;
-            width: 2px;
-            height: 16px;
-            background: #10b981;
-            border-radius: 1px;
-        }
-        
-        .trident-logo-icon::after {
-            content: '';
-            position: absolute;
-            width: 2px;
-            height: 12px;
-            background: #10b981;
-            border-radius: 1px;
-            left: 8px;
-        }
-        
-        .trident-logo-icon span {
-            position: absolute;
-            width: 2px;
-            height: 12px;
-            background: #10b981;
-            border-radius: 1px;
-            right: 8px;
+        .trident-logo-icon img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
         }
         
         .trident-logo-text {
@@ -174,7 +138,7 @@ if ($_POST && isset($_POST['trident_login'])) {
             border-radius: 20px;
             padding: 3rem;
             width: 100%;
-            max-width: 400px;
+            max-width: 500px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
             position: relative;
             z-index: 10;
@@ -332,9 +296,8 @@ if ($_POST && isset($_POST['trident_login'])) {
     <!-- TRIDENT Logo -->
     <div class="trident-logo">
         <div class="trident-logo-icon">
-            <span></span>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/trident-footer-logo.png" alt="TRIDENT Logo">
         </div>
-        <div class="trident-logo-text">TRIDENT</div>
     </div>
     
     <!-- Login Card -->
