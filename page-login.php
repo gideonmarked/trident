@@ -26,11 +26,11 @@ if ($_POST && isset($_POST['trident_login'])) {
     if (is_wp_error($user)) {
         $login_error = 'Invalid email or password. Please try again.';
     } else {
-        // Check if user has TRIDENT admin access
+        // Use the same redirect logic as wp-login.php
         if (trident_user_has_access($user->ID)) {
             wp_redirect(home_url('/trident-admin'));
         } else {
-            wp_redirect(home_url());
+            wp_redirect(admin_url());
         }
         exit;
     }

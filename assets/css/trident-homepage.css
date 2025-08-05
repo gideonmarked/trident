@@ -249,8 +249,11 @@
 .trident-customize {
     position: relative;
     padding: 5rem 0;
-    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
     overflow: hidden;
+    height: 460px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .trident-customize-background {
@@ -259,26 +262,11 @@
     left: 0;
     right: 0;
     bottom: 0;
-    opacity: 0.1;
+    background: url('../images/over-tumblers.png') no-repeat center center;
+    background-size: cover;
 }
 
-.trident-tumbler-patterns {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-}
 
-.trident-overlay-tumblers {
-    max-width: 100%;
-    height: auto;
-    opacity: 0.3;
-}
 
 .trident-pattern {
     width: 80px;
@@ -304,14 +292,13 @@
     position: relative;
     z-index: 2;
     max-width: 1200px;
-    margin: 0 auto;
     padding: 0 2rem;
     text-align: center;
 }
 
 .trident-customize-title {
     font-size: 1.5rem;
-    color: #92400e;
+    color: white;
     margin-bottom: 0.5rem;
     font-weight: 600;
 }
@@ -319,12 +306,12 @@
 .trident-customize-subtitle {
     font-size: 3rem;
     font-weight: 900;
-    color: #1f2937;
+    color: white;
     margin-bottom: 2rem;
 }
 
 .trident-customize-btn {
-    background: #1f2937;
+    background: #FEBA17;
     color: white;
     padding: 1rem 2rem;
     border: none;
@@ -362,7 +349,7 @@
 
 .trident-products-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     margin-bottom: 3rem;
 }
@@ -433,6 +420,13 @@
     margin-bottom: 1rem;
 }
 
+.trident-customize-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
 .trident-customize-btn-small {
     background: #fbbf24;
     color: #1f2937;
@@ -452,7 +446,7 @@
 .trident-color-swatches {
     display: flex;
     gap: 0.5rem;
-    justify-content: center;
+    align-items: center;
 }
 
 .trident-color-swatch {
@@ -472,6 +466,7 @@
 .trident-color-swatch.green { background: #10b981; }
 .trident-color-swatch.brown { background: #92400e; }
 .trident-color-swatch.yellow { background: #fbbf24; }
+.trident-color-swatch.black { background: #1f2937; }
 
 .trident-product-quantity {
     display: flex;
@@ -747,6 +742,12 @@
         right: 1rem;
     }
 
+    .trident-customize-row {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-start;
+    }
+    
     .trident-about-content,
     .trident-customize-content,
     .trident-featured-content {

@@ -115,7 +115,7 @@
                     
                     <div class="trident-color-options">
                         <div class="trident-color-swatch yellow active"></div>
-                        <div class="trident-color-swatch black"></div>
+                                                        <div class="trident-color-swatch black" style="background: #1f2937;"></div>
                         <div class="trident-color-swatch green"></div>
                         <div class="trident-color-swatch teal"></div>
                         <div class="trident-color-swatch orange"></div>
@@ -162,12 +162,11 @@
                         <div class="trident-product-card">
                             <div class="trident-product-pagination">(1/10)</div>
                             <div class="trident-product-image">
-                                <img src="<?php echo get_site_url(); ?>/wp-content/uploads/2025/07/assets_task_01k15dbfvcfk7bnnd2c0hamdm9_1753602237_img_0-200x300.webp" alt="<?php echo esc_attr($product->post_title); ?>" class="trident-product-image">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/tumbler-default.png" alt="<?php echo esc_attr($product->post_title); ?>" class="trident-product-image">
                             </div>
                             <div class="trident-product-name"><?php echo esc_html($product->post_title); ?></div>
                             <div class="trident-product-price">₱1,299.00</div>
                             <div class="trident-product-options">
-                                <button class="trident-customize-btn-small">CUSTOMIZE</button>
                                 <div class="trident-color-swatches">
                                     <div class="trident-color-swatch green"></div>
                                     <div class="trident-color-swatch brown"></div>
@@ -192,12 +191,11 @@
                         <div class="trident-product-card">
                             <div class="trident-product-pagination">(1/10)</div>
                             <div class="trident-product-image">
-                                <img src="<?php echo get_site_url(); ?>/wp-content/uploads/2025/07/assets_task_01k15asm55f3e9pgfmm2qsnzs3_1753599594_img_0-200x300.webp" alt="32 oz Lightweight Wide Mouth Trail Series™" class="trident-product-image">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/tumbler-default.png" alt="32 oz Lightweight Wide Mouth Trail Series™" class="trident-product-image">
                             </div>
                             <div class="trident-product-name">32 oz Lightweight Wide Mouth Trail Series™</div>
                             <div class="trident-product-price">₱1,299.00</div>
                             <div class="trident-product-options">
-                                <button class="trident-customize-btn-small">CUSTOMIZE</button>
                                 <div class="trident-color-swatches">
                                     <div class="trident-color-swatch green"></div>
                                     <div class="trident-color-swatch brown"></div>

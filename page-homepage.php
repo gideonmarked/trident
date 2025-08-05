@@ -93,9 +93,6 @@
     <!-- Customize Section -->
     <section class="trident-customize">
         <div class="trident-customize-background">
-            <div class="trident-tumbler-patterns">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/overlay-tumblers.png" alt="Tumbler Patterns" class="trident-overlay-tumblers">
-            </div>
         </div>
         <div class="trident-customize-content">
             <h2 class="trident-customize-title">Your Cup, Your Style</h2>
@@ -122,12 +119,15 @@
                         <div class="trident-product-card">
                             <div class="trident-product-pagination">(1/<?php echo count($featured_products); ?>)</div>
                             <div class="trident-product-image">
-                                <img src="<?php echo esc_url($product->image_url); ?>" alt="<?php echo esc_attr($product->name); ?>" class="trident-product-image">
+                                <?php if (!empty($product->image_url)): ?>
+                                    <img src="<?php echo esc_url($product->image_url); ?>" alt="<?php echo esc_attr($product->name); ?>" class="trident-product-image">
+                                <?php else: ?>
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/tumbler-default.png" alt="<?php echo esc_attr($product->name); ?>" class="trident-product-image">
+                                <?php endif; ?>
                             </div>
                             <div class="trident-product-name"><?php echo esc_html($product->name); ?></div>
                             <div class="trident-product-price">₱<?php echo number_format($product->price, 2); ?></div>
                             <div class="trident-product-options">
-                                <button class="trident-customize-btn-small">CUSTOMIZE</button>
                                 <div class="trident-color-swatches">
                                     <?php
                                     if (!empty($colors['body_colors'])) {
@@ -161,12 +161,11 @@
                         <div class="trident-product-card">
                             <div class="trident-product-pagination">(<?php echo ($i + 1); ?>/4)</div>
                             <div class="trident-product-image">
-                                <img src="<?php echo get_site_url(); ?>/wp-content/uploads/2025/07/assets_task_01k15asm55f3e9pgfmm2qsnzs3_1753599594_img_0-200x300.webp" alt="32 oz Lightweight Wide Mouth Trail Series™" class="trident-product-image">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/tumbler-default.png" alt="32 oz Lightweight Wide Mouth Trail Series™" class="trident-product-image">
                             </div>
                             <div class="trident-product-name">32 oz Lightweight Wide Mouth Trail Series™</div>
                             <div class="trident-product-price">₱1,299.00</div>
                             <div class="trident-product-options">
-                                <button class="trident-customize-btn-small">CUSTOMIZE</button>
                                 <div class="trident-color-swatches">
                                     <div class="trident-color-swatch green"></div>
                                     <div class="trident-color-swatch brown"></div>
