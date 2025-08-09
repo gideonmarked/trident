@@ -40,6 +40,7 @@
             </nav>
 
             <div class="header-actions">
+                <?php trident_add_cart_icon_to_header(); ?>
                 <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
                     <span class="screen-reader-text">Menu</span>
                     <span class="hamburger"></span>

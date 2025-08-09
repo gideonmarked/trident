@@ -21,6 +21,16 @@ define('TRIDENT_THEME_DIR', get_template_directory());
 define('TRIDENT_THEME_URI', get_template_directory_uri());
 
 /**
+ * Start session for cart functionality
+ */
+function trident_start_session() {
+    if (!session_id()) {
+        session_start();
+    }
+}
+add_action('init', 'trident_start_session', 1);
+
+/**
  * Load core theme files
  */
 function trident_load_core_files() {
@@ -59,6 +69,7 @@ add_action('init', 'trident_load_admin_files');
 function trident_load_component_files() {
     // Component functionality
     require_once TRIDENT_THEME_DIR . '/includes/components/color-picker.php';
+    require_once TRIDENT_THEME_DIR . '/includes/components/mini-cart.php';
 }
 add_action('init', 'trident_load_component_files');
 
