@@ -10,8 +10,8 @@
             <a href="#about">About</a>
             <a href="<?php echo get_permalink(get_page_by_path('all-products')); ?>">All Products</a>
             <a href="#search">Search</a>
+            <a href="#checkout" class="checkout">Check Out</a>
         </nav>
-        <a href="#checkout" class="trident-checkout-btn">Check Out</a>
     </div>
 </header>
 

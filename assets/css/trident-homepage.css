@@ -1,5 +1,17 @@
 /* Trident Homepage Styles */
 
+/* Global h2 styles */
+h2 {
+    font-weight: 700;
+}
+
+/* h2 class styles */
+h2.trident-about-title,
+h2.trident-customize-title,
+h2.trident-featured-title {
+    font-weight: 700;
+}
+
 .trident-homepage {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
@@ -8,7 +20,7 @@
 
 /* Header Styles */
 .trident-header {
-    background: transparent;
+    background: #000000;
     color: white;
     padding: 1.25rem 0;
     position: fixed;
@@ -20,14 +32,13 @@
 }
 
 .trident-header.scrolled {
-    background: rgba(25, 25, 25, 0.95);
+    background: #000000;
     backdrop-filter: blur(10px);
 }
 
 .trident-header-content {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -45,6 +56,7 @@
     text-transform: uppercase;
     padding: 0.5rem 0;
     flex-shrink: 0;
+    letter-spacing: 1px;
 }
 
 .trident-logo-image {
@@ -58,6 +70,7 @@
     color: white;
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
 }
 
 /* Hide logo text when image is loaded */
@@ -67,11 +80,10 @@
 
 .trident-nav {
     display: flex;
-    gap: 2.5rem;
     align-items: center;
     padding: 0.5rem 0;
-    flex: 1;
-    justify-content: center;
+    width: 50%;
+    justify-content: space-between;
 }
 
 .trident-nav a {
@@ -79,33 +91,39 @@
     text-decoration: none;
     transition: color 0.3s ease;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
+    font-weight: 700;
+    font-size: 0.95rem;
     padding: 0.5rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .trident-nav a:hover {
     color: #fbbf24;
 }
 
-.trident-checkout-btn {
+.trident-nav a.checkout {
     background: #fbbf24;
-    color: white;
+    color: #000000;
     padding: 0.875rem 1.75rem;
     border-radius: 30px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     transition: all 0.3s ease;
     font-family: 'Montserrat', sans-serif;
     font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    flex-shrink: 0;
 }
 
-.trident-checkout-btn:hover {
+.trident-nav a.checkout:hover {
     background: #f59e0b;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+
 
 /* Hero Section */
 .trident-hero {
@@ -221,9 +239,10 @@
 
 .trident-about-content {
     max-width: 1200px;
+    width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
     text-align: left;
+    padding-right: 600px;
 }
 
 .trident-about-title {
@@ -336,7 +355,6 @@
 .trident-featured-content {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
 }
 
 .trident-featured-title {
@@ -530,7 +548,6 @@
 .trident-footer-content {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 3rem;
@@ -636,9 +653,7 @@
         padding: 1rem 0;
     }
     
-    .trident-header-content {
-        padding: 0 1.5rem;
-    }
+
     
     .trident-nav {
         gap: 1.5rem;
@@ -692,9 +707,7 @@
         padding: 0.875rem 0;
     }
     
-    .trident-header-content {
-        padding: 0 1rem;
-    }
+
     
     .trident-nav {
         gap: 1rem;
@@ -710,7 +723,7 @@
         height: 28px;
     }
     
-    .trident-checkout-btn {
+    .trident-nav a.checkout {
         padding: 0.75rem 1.25rem;
         font-size: 0.8rem;
     }
@@ -748,11 +761,7 @@
         align-items: flex-start;
     }
     
-    .trident-about-content,
-    .trident-customize-content,
-    .trident-featured-content {
-        padding: 0 1rem;
-    }
+
     
     .trident-about-title,
     .trident-featured-title {

@@ -1,4 +1,17 @@
 /* TRIDENT All Products Page Styles */
+
+/* Global h2 styles */
+h2 {
+    font-weight: 700;
+}
+
+/* h2 class styles */
+h2.trident-about-title,
+h2.trident-customize-title,
+h2.trident-featured-title {
+    font-weight: 700;
+}
+
 :root {
     --trident-green: #2d5016;
     --trident-yellow: #fbbf24;
@@ -17,9 +30,9 @@
 
 /* Header */
 .trident-header {
-    background: #1a1a1a;
+    background: #000000;
     color: white;
-    padding: 1rem 0;
+    padding: 1.25rem 0;
     position: fixed;
     top: 0;
     left: 0;
@@ -29,14 +42,13 @@
 }
 
 .trident-header.scrolled {
-    background: rgba(26, 26, 26, 0.95);
+    background: #000000;
     backdrop-filter: blur(10px);
 }
 
 .trident-header-content {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -45,11 +57,16 @@
 .trident-logo {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.75rem;
     font-size: 1.5rem;
-    font-weight: bold;
+    font-weight: 900;
     color: white;
     text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    padding: 0.5rem 0;
+    flex-shrink: 0;
+    letter-spacing: 1px;
 }
 
 .trident-logo-image {
@@ -60,9 +77,11 @@
 
 .trident-logo-text {
     font-size: 1.5rem;
-    font-weight: bold;
+    font-weight: 900;
     color: white;
     text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
 }
 
 /* Hide logo text when image is loaded */
@@ -72,35 +91,48 @@
 
 .trident-nav {
     display: flex;
-    gap: 2rem;
     align-items: center;
+    padding: 0.5rem 0;
+    width: 50%;
+    justify-content: space-between;
 }
 
 .trident-nav a {
     color: white;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 700;
+    font-size: 0.95rem;
     transition: color 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .trident-nav a:hover {
     color: #fbbf24;
 }
 
-.trident-checkout-btn {
+.trident-nav a.checkout {
     background: #fbbf24;
-    color: #1a1a1a;
-    padding: 0.5rem 1rem;
-    border-radius: 25px;
+    color: #000000;
+    padding: 0.875rem 1.75rem;
+    border-radius: 30px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     transition: all 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.trident-checkout-btn:hover {
+.trident-nav a.checkout:hover {
     background: #f59e0b;
     transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+
 
 /* Hero Section */
 .trident-hero {
